@@ -1,0 +1,10 @@
+# ignore folders
+report/
+venv
+
+# ignore failes started with "."
+.*
+
+# do NOT igmore .gitignore и .env.example
+!.gitignore
+!.env.example
