@@ -1,5 +1,3 @@
-# core/test_orchestrator.py
-
 import yaml
 import logging
 from pathlib import Path
@@ -19,7 +17,6 @@ class TestOrchestrator:
         self.logger = LoggerManager.get_logger("TestOrchestrator")
         self.plugin_registry = PluginRegistry()
         self.plugin_registry.discover_plugins()
-        # self.results: Dict[str, Dict[str, PluginResult]] = {}
         self.results = {}
 
     def run(self):
@@ -33,8 +30,6 @@ class TestOrchestrator:
                 data_path=scenario.datapath,
                 logger=self.logger,
                 mode=self.config.mode,
-                #metrics={},
-                #plugin_results={}
             )
 
             # BEFORE RUN PHASE
@@ -59,12 +54,9 @@ class TestOrchestrator:
         generate_html_report(self.results, output_path)
 
 
-
 if __name__ == "__main__":
     import sys
-
     config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/regression.yaml"
-    # config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/ci_camera.yaml"
     config_path = Path(config_path).resolve()
     orchestrator = TestOrchestrator(str(config_path))
     orchestrator.run()

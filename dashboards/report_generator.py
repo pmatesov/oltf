@@ -46,7 +46,7 @@ HTML_TEMPLATE = """
 def generate_html_report(results: Dict[str, List[PluginResult]], output_path: Path):
     all_kpis = set()
 
-    # 1. Собираем все KPI-плагины
+    # 1. Collect all KPI-Plugins
     for plugin_results in results.values():
         for result in plugin_results:
             all_kpis.add(result.plugin_name)
@@ -54,9 +54,9 @@ def generate_html_report(results: Dict[str, List[PluginResult]], output_path: Pa
     kpi_headers_html = ''.join(f'<th>{kpi}</th>' for kpi in sorted(all_kpis))
     rows_html = ''
 
-    # 2. Генерируем строки отчета
+    # 2. Generate report lines
     for scenario_name, plugin_results_list in results.items():
-        # Преобразуем список в словарь: plugin_name → PluginResult
+        # convert list to dictionary: plugin_name → PluginResult
         plugin_results = {r.plugin_name: r for r in plugin_results_list}
 
         row_html = f'<tr><td>{scenario_name}</td>'
@@ -81,7 +81,7 @@ def generate_html_report(results: Dict[str, List[PluginResult]], output_path: Pa
         row_html += '</tr>'
         rows_html += row_html
 
-    # 3. Формируем и сохраняем HTML
+    # 3. Generate and save HTML
     html = HTML_TEMPLATE.format(kpi_headers=kpi_headers_html, rows=rows_html)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w') as f:
