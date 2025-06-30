@@ -20,7 +20,7 @@ post_run_kpis:
   stage: report
   image: python:3.11
   script:
-    - python oltf/core/test_orchestrator.py --config regression.yaml
+    - PYTHONPATH=. python core/test_orchestrator.py configs/regression.yaml
   artifacts:
     when: always
     paths:

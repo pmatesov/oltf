@@ -7,4 +7,5 @@ venv
 
 # do NOT igmore .gitignore и .env.example
 !.gitignore
+!.gitlab-ci.yml
 !.env.example
