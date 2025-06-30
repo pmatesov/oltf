@@ -7,7 +7,7 @@ from typing import Dict, Any
 from core.logger_manager import LoggerManager
 from core.plugin_registry import PluginRegistry
 from core.models import TestConfiguration, TestContext, PluginResult, PluginPhase, ScenarioConfig
-from core.report_generator import generate_html_report
+from dashboards.report_generator import generate_html_report
 
 
 class TestOrchestrator:
@@ -54,17 +54,17 @@ class TestOrchestrator:
             self.results[scenario.name] = scenario_results
             self.logger.info(f"Scenario {scenario.name} completed")
 
-
         self.logger.info("All test scenarios completed.")
-        # generate_html_report(self.results, output_dir=self.config.output_dir or Path("reports"))
+        output_path = Path("reports/dashboards/regression_dashboard.html")
+        generate_html_report(self.results, output_path)
 
 
 
 if __name__ == "__main__":
     import sys
 
-    # config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/regression.yaml"
-    config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/ci_camera.yaml"
+    config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/regression.yaml"
+    # config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/ci_camera.yaml"
     config_path = Path(config_path).resolve()
     orchestrator = TestOrchestrator(str(config_path))
     orchestrator.run()
