@@ -1,0 +1,64 @@
+name: fusion_test_nightly
+mode: SIL
+scenarios:
+  - name: Latency KPI and Error Rate KPI
+    datapath: tests/plugins/post_run/camera_passing.jsonl
+    plugins:
+      - name: LatencyKPIPlugin
+        config:
+          latency_threshold: 50
+          latency_field: latency_ms
+
+      - name: ErrorRateKPIPlugin
+        config:
+          error_rate_threshold: 0.1
+          error_flag_field: error_rate_percent
+
+      - name: DataDropRateKPIPlugin
+        config:
+          drop_rate_threshold: 0.005
+          expected_interval: 10
+
+  - name: fused_data_with_kpis
+    datapath: tests/plugins/post_run/fused_data_with_kpis.jsonl
+    plugins:
+      - name: DataAlignmentJitterKPIPlugin
+        config:
+          data_alignment_jitter_threshold: 5
+          data_alignment_jitter_field: data_alignment_jitter_ms
+
+      - name: DecisionConsistencyScorePlugin
+        config:
+          consistency_threshold: 0.95
+
+      - name: LatencyKPIPlugin
+        config:
+          latency_threshold: 50
+          latency_field: fusion_latency_ms
+
+      - name: FusionRedundancyScorePlugin
+        config:
+          redundancy_threshold: 0.5
+
+      - name: SpatialCorrelationConsistencyPlugin
+        config:
+          spatial_correlation_threshold: 0.9
+
+
+  - name: Radar Signal Quality Score KPI
+    datapath: tests/plugins/post_run/radar_data_with_kpis.jsonl
+    plugins:
+      - name: RadarSignalQualityScorePlugin
+        config:
+          min_avg_signal_strength: 0.8
+
+
+  - name: Data Drop Rate KPI (Camera)
+    datapath: tests/plugins/post_run/camera_data_with_kpis.jsonl
+    plugins:
+      - name: DataDropRateKPIPlugin
+        config:
+          drop_rate_threshold: 0.005
+          expected_interval: 10
+
+

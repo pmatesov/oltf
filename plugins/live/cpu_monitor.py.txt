@@ -1,0 +1,33 @@
+import psutil
+import logging
+import time
+import threading
+
+
+class CpuMonitorPlugin:
+    def __init__(self, config):
+        self.max_percent = getattr(config, 'max_percent', 90)
+        self.logger = logging.getLogger("cpu_monitor")
+        self.interval_sec = 1
+        self.running = True
+        self.thread = None
+
+    def _monitor(self):
+        self.logger.info(f"Starting CPU monitor, max allowed = {self.max_percent}%")
+        while self.running:
+            cpu = psutil.cpu_percent()
+            if cpu > self.max_percent:
+                self.logger.warning(f"CPU usage too high: {cpu}%")
+            else:
+                self.logger.debug(f"CPU usage: {cpu}%")
+            time.sleep(self.interval_sec)
+
+    def during_run(self):
+        self.thread = threading.Thread(target=self._monitor, daemon=True)
+        self.thread.start()
+
+    def stop(self):
+        self.running = False
+        if self.thread:
+            self.thread.join()
+

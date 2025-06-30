@@ -1,0 +1,86 @@
+2025-06-29 14:25:56,724 - LoggerManager - INFO - Logging initialized. Logs saved to ./reports/logs/test.log
+2025-06-29 14:25:56,724 - PluginRegistry - INFO - Discovered 10 plugins
+2025-06-29 14:25:56,724 - TestOrchestrator - INFO - Starting test: fusion_test_nightly
+2025-06-29 14:25:56,724 - TestOrchestrator - INFO - Running scenario: Latency KPI and Error Rate KPI
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Scenario Latency KPI and Error Rate KPI completed
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Running scenario: fused_data_with_kpis
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Scenario fused_data_with_kpis completed
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Running scenario: Radar Signal Quality Score KPI
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Scenario Radar Signal Quality Score KPI completed
+2025-06-29 14:25:56,725 - TestOrchestrator - INFO - Running scenario: Data Drop Rate KPI (Camera)
+2025-06-29 14:25:56,726 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 14:25:56,726 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 14:25:56,726 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 14:25:56,726 - TestOrchestrator - INFO - Scenario Data Drop Rate KPI (Camera) completed
+2025-06-29 14:25:56,726 - TestOrchestrator - INFO - All test scenarios completed.
+2025-06-29 15:45:26,803 - LoggerManager - INFO - Logging initialized. Logs saved to ./reports/logs/test.log
+2025-06-29 15:45:26,806 - PluginRegistry - INFO - Discovered 10 plugins
+2025-06-29 15:45:26,806 - TestOrchestrator - INFO - Starting test: fusion_test_nightly
+2025-06-29 15:45:26,806 - TestOrchestrator - INFO - Running scenario: Latency KPI and Error Rate KPI
+2025-06-29 15:45:26,807 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 15:45:26,808 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 15:45:26,808 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 16:20:47,169 - TestOrchestrator - INFO - Scenario Latency KPI and Error Rate KPI completed
+2025-06-29 16:20:47,169 - TestOrchestrator - INFO - Running scenario: fused_data_with_kpis
+2025-06-29 16:20:47,170 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 16:20:47,170 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 16:20:47,170 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 16:21:28,944 - LoggerManager - INFO - Logging initialized. Logs saved to ./reports/logs/test.log
+2025-06-29 16:21:28,945 - PluginRegistry - INFO - Discovered 10 plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Starting test: fusion_test_nightly
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Running scenario: Latency KPI and Error Rate KPI
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Scenario Latency KPI and Error Rate KPI completed
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Running scenario: fused_data_with_kpis
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Scenario fused_data_with_kpis completed
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Running scenario: Radar Signal Quality Score KPI
+2025-06-29 16:21:28,945 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Scenario Radar Signal Quality Score KPI completed
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Running scenario: Data Drop Rate KPI (Camera)
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - Scenario Data Drop Rate KPI (Camera) completed
+2025-06-29 16:21:28,946 - TestOrchestrator - INFO - All test scenarios completed.
+2025-06-29 17:42:13,227 - LoggerManager - INFO - Logging initialized. Logs saved to ./reports/logs/test.log
+2025-06-29 17:42:13,228 - PluginRegistry - INFO - Discovered 10 plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Starting test: fusion_test_nightly
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Running scenario: Latency KPI and Error Rate KPI
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Scenario Latency KPI and Error Rate KPI completed
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Running scenario: fused_data_with_kpis
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Scenario fused_data_with_kpis completed
+2025-06-29 17:42:13,228 - TestOrchestrator - INFO - Running scenario: Radar Signal Quality Score KPI
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Scenario Radar Signal Quality Score KPI completed
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Running scenario: Data Drop Rate KPI (Camera)
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Executing before_run plugins
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Executing live plugins
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Executing post_run plugins
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - Scenario Data Drop Rate KPI (Camera) completed
+2025-06-29 17:42:13,229 - TestOrchestrator - INFO - All test scenarios completed.
+2025-06-29 17:48:18,140 - LoggerManager - INFO - Logging initialized. Logs saved to ./reports/logs/test.log
+2025-06-29 17:48:18,142 - PluginRegistry - INFO - Discovered 10 plugins

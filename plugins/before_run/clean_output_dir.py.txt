@@ -1,0 +1,22 @@
+import os
+import shutil
+import logging
+
+
+class CleanDirPlugin:
+    def __init__(self, config):
+        self.output_dir = config.output_dir if hasattr(config, 'output_dir') else "./reports/"
+        self.logger = logging.getLogger("clean_output_dir")
+
+    def before_run(self):
+        self.logger.info(f"Cleaning output directory: {self.output_dir}")
+        try:
+            for sub in ["logs", "summary"]:
+                full_path = os.path.join(self.output_dir, sub)
+                if os.path.exists(full_path):
+                    shutil.rmtree(full_path)
+                    self.logger.debug(f"Removed {full_path}")
+                os.makedirs(full_path)
+        except Exception as e:
+            self.logger.error(f"Failed to clean output directories: {e}")
+

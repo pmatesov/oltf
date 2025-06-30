@@ -1,0 +1,6 @@
+pytest
+pyyaml
+numpy
+jinja2
+matplotlib
+psutil

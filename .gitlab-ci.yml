@@ -1,0 +1,27 @@
+stages:
+  - lint
+  - test
+  - report
+
+lint:
+  image: python:3.11
+  script:
+    - pip install flake8
+    - flake8 oltf
+
+unit_tests:
+  stage: test
+  image: python:3.11
+  script:
+    - pip install -r requirements.txt
+    - pytest tests/ --maxfail=3 --disable-warnings
+
+post_run_kpis:
+  stage: report
+  image: python:3.11
+  script:
+    - python oltf/core/test_orchestrator.py --config regression.yaml
+  artifacts:
+    when: always
+    paths:
+      - reports/

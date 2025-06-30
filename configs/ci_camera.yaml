@@ -1,0 +1,15 @@
+name: latency_camera_test_ci
+mode: SIL
+scenarios:
+  - name: Latency KPI and Error Rate KPI
+    datapath: tests/plugins/post_run/camera_passing.jsonl
+    plugins:
+      - name: LatencyKPIPlugin
+        config:
+          latency_threshold: 50
+          latency_field: latency_ms
+
+      - name: ErrorRateKPIPlugin
+        config:
+          error_rate_threshold: 0.1
+          error_flag_field: error_rate_percent

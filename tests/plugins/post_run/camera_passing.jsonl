@@ -1,0 +1,2 @@
+{"timestamp": 1000, "latency_ms": 40.0, "error_rate_percent": 0.0005, "frame_id": "frame_1000.jpg", "objects": [{"class": "car", "bbox_3d": [{"x": 0, "y": 0, "z": 0}, {"x": 1, "y": 0, "z": 0}, {"x": 1, "y": 1, "z": 0}, {"x": 0, "y": 1, "z": 0}]}]}
+{"timestamp": 1010, "latency_ms": 39.5, "error_rate_percent": 0.0009, "frame_id": "frame_1010.jpg", "objects": [{"class": "car", "bbox_3d": [{"x": 2, "y": 2, "z": 0}, {"x": 3, "y": 2, "z": 0}, {"x": 3, "y": 3, "z": 0}, {"x": 2, "y": 3, "z": 0}]}]}
