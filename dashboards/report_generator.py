@@ -81,7 +81,7 @@ def generate_html_report(results: Dict[str, List[PluginResult]], output_path: Pa
         row_html += '</tr>'
         rows_html += row_html
 
-    # 3. Generate and save HTML
+    # 3. construct and save HTML
     html = HTML_TEMPLATE.format(kpi_headers=kpi_headers_html, rows=rows_html)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w') as f:
