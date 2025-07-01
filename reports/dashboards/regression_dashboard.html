@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regression Matrix Dashboard</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 8px;
+        }
+        .passed { background-color: #c8e6c9; }     /* green */
+        .failed { background-color: #ffcdd2; }     /* red */
+        .warning { background-color: #fff9c4; }    /* yellow */
+        .na { background-color: #eeeeee; }         /* gray */
+    </style>
+</head>
+<body>
+    <h2>Regression Matrix Dashboard</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Scenario</th>
+                <th>DataAlignmentJitterKPIPlugin</th><th>DataDropRateKPIPlugin</th><th>DecisionConsistencyScorePlugin</th><th>ErrorRateKPIPlugin</th><th>FusionRedundancyScorePlugin</th><th>LatencyKPIPlugin</th><th>RadarSignalQualityScorePlugin</th><th>SpatialCorrelationConsistencyPlugin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Latency KPI and Error Rate KPI</td><td class="na" title="Not applicable">⚪</td><td class="passed" title="Data drop rate 0.00% within threshold 0.50%">✅</td><td class="na" title="Not applicable">⚪</td><td class="passed" title="Max Error rate 0.0900% within threshold 10.0000%">✅</td><td class="na" title="Not applicable">⚪</td><td class="passed" title="Max latency 40.00 ms within threshold 50 ms">✅</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td></tr><tr><td>fused_data_with_kpis</td><td class="passed" title="Max latency 4.00 ms within threshold 5 ms">✅</td><td class="na" title="Not applicable">⚪</td><td class="passed" title="Decision consistency score 0.9531 meets threshold 0.95">✅</td><td class="na" title="Not applicable">⚪</td><td class="passed" title="Fusion Redundancy Score 0.95 is above threshold 0.50">✅</td><td class="failed" title="Max latency 119.00 ms exceeds threshold 50 ms">❌</td><td class="na" title="Not applicable">⚪</td><td class="failed" title="Plugin not found: SpatialCorrelationConsistencyPlugin">❌</td></tr><tr><td>Radar Signal Quality Score KPI</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="failed" title="Plugin not found: RadarSignalQualityScorePlugin">❌</td><td class="na" title="Not applicable">⚪</td></tr><tr><td>Data Drop Rate KPI (Camera)</td><td class="na" title="Not applicable">⚪</td><td class="failed" title="Data drop rate 90.92% exceeds threshold 0.50%">❌</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td><td class="na" title="Not applicable">⚪</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

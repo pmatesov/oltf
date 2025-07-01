@@ -33,7 +33,7 @@ oltf/
 📊 **Example Regression Matrix Report**  
 Visual representation of pass/fail/warning status for each KPI in each scenario:
 
-![Regression Matrix Report](./dashboards/RegressionMatrixTestReport.JPG)
+![Regression Matrix Report](./reports/RegressionMatrixTestReport.JPG)
 
 ---
 
@@ -74,7 +74,7 @@ PYTHONPATH=. python core/test_orchestrator.py configs/my_custom.yaml
 
 KPIs visualized over time, including detailed frame-by-frame status:
 
-![Sensor Fusion Test Report](./dashboards/SensorFusionTestReport.JPG)
+![Sensor Fusion Test Report](./reports/SensorFusionTestReport.JPG)
 
 ---
 
